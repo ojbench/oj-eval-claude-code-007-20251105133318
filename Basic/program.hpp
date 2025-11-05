@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <map>
 #include <unordered_map>
 #include "statement.hpp"
 
@@ -140,13 +141,17 @@ public:
 
     int getNextLineNumber(int lineNumber);
 
+    void listAll();
+
     //more func to add
     //todo
 
 private:
 
     // Fill this in with whatever types and instance variables you need
-    //todo
+    std::map<int, std::string> sourceLines;
+    std::map<int, Statement*> parsedStatements;
+    std::set<int> lineNumbers;
 };
 
 #endif
